@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const userRoute = require("./routes/user");
+const userRouter = require("./routes/user");
 //Middleware
 app.use(cors());
 app.use(morgan("short"));
@@ -17,6 +17,6 @@ app.get("/test", (req, res) => {
   res.send("Server working!");
 });
 
-app.use("/user", userRoute);
+app.use("/user", userRouter);
 
 module.exports = { app };
