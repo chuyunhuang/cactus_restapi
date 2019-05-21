@@ -36,7 +36,7 @@ app.get("/user", (req, res) => {
     for (let row of res.rows) {
       console.log(JSON.stringify(row));
     }
-    client.end();
+    db.end();
   });
 });
 
