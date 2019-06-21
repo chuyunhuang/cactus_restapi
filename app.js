@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const userRouter = require("./routes/user");
+const postRouter = require("./routes/post");
+
 //Middleware
 app.use(cors());
 app.use(morgan("short"));
@@ -18,5 +20,6 @@ app.get("/test", (req, res) => {
 });
 
 app.use("/user", userRouter);
+app.use("/post", postRouter);
 
 module.exports = { app };
